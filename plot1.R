@@ -8,7 +8,8 @@ datetime<-paste(hpc$Date,hpc$Time)
 hpc$DateTime<-strptime(datetime,"%d/%m/%Y %H:%M:%S")
 
 #generate plot 1
-png(filename = "plot1.png", width = 480, height = 480,units = "px", pointsize = 12, bg = "transparent", res = NA,
+#using white background instead of transparent for easier visualization in GitHub
+png(filename = "plot1.png", width = 480, height = 480,units = "px", pointsize = 12, res = NA,
     restoreConsole = TRUE)
 par(mar=c(4.3,3.8,2.6,1.5))
 hist(hpc$Global_active_power, col='red',main="Global Active Power",xlab="Global Active Power (kilowatts)")
